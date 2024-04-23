@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.movieForm {
+  display: flex;
+  flex-direction: row; /* Dikey sıralama */
+  align-items: center;
+  max-width: 80%;
+  margin: 2% auto;
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .movieName {
+    flex-grow: 0.6;
+  }
+
+  .movieFilter{
+    flex-grow: 0.1;
+  }
+
+  .movieYear{
+    flex-grow: 0.1;
+  }
+
+  .movieName + .movieYear,
+  .movieYear + .movieFilter
+  {
+    margin-left: 10px;
+  }
+
+  .button {
+    margin-left: 5%;
+    @media (max-width: 768px) {
+      max-width: 30%;
+      margin: 2% auto;
+    }
+  }
+}
